@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+<body>
+
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="{% static 'img/logo.png' %}" alt="Logo"></a>
+		</div>
+		<nav>
+			<div class="topnav" id="myTopnav">
+				<a href="/">HOME</a>
+				<a href="projects">PROJECTS</a>
+				<a href="blog">BLOG</a>
+				<a href="contact">CONTACTS</a>
+				<a href="about">ABOUT</a>
+				<a href="services">SERVICES</a>
+				<a href="location">LOCATION</a>
+				<a id="menu" href="#" class="icon">&#9776;</a>
+			</div>
+		</nav>
+	</header>
+{% block content %}
+{% endblock %}
+	<footer>
+		<nav>
+			<a href="index.html">HOME</a>
+			<a href="projects.html">PROJECTS</a>
+			<a href="blog.html">BLOG</a>
+			<a href="contact.html">CONTACTS</a>
+			<a href="about.html">ABOUT</a>
+			<a href="services.html">SERVICES</a>
+			<a href="location.html">LOCATION</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html">
+				<img  class="logo" src="{% static 'img/logo.png' %}">
+			</a>
+		</div>
+		<div class="social">
+			<a href="#"><img src="{% static 'img/social_icons/em.png' %}"></a>
+			<a href="#"><img src="{% static 'img/social_icons/face.png' %}"></a>
+			<a href="#"><img src="{% static 'img/social_icons/goo.png' %}"></a>
+			<a href="#"><img src="{% static 'img/social_icons/inst.png' %}"></a>
+			<a href="#"><img src="{% static 'img/social_icons/pint.png' %}"></a>
+		</div>
+		<p>
+			Web de Blog 2017
+		</p>
+	</footer>
+
+
+
+	<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

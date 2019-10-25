@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    {% for article in articles %}
+    <div class="blog-container">
+			<div class="blog-header">
+				<div class="blog-cover">
+                    <img src="/media/{{ article.image }}">
+				</div>
+			</div>
+			<div class="blog-body">
+				<div class="blog-title">
+					<h1>
+						<a href="{% url 'view_article_content' article_slug=article.slug %}">  {{ article.description }} </a>
+					</h1>
+				</div>
+				<div class="blog-text">
+					<p>{{ article.text }}</p>
+				</div>
+				<div class="blog-tags">
+					<ul>
+						<li>
+							<a href="#">lorem</a>
+							<a href="#">ipsum</a>
+							<a href="#">dolor</a>
+							<a href="#">consectetur</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="blog-footer">
+				<ul>
+					<li class="published-date">4 days ago</li>
+				</ul>
+			</div>
+
+		</div>
+    {% endfor %}
+{% endblock content %}
